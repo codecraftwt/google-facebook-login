@@ -1,0 +1,7 @@
+<div class="">
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    <div class="main-content" [style.marginLeft]="isSidebarVisible ? '300px' : '0px'" style="overflow: hidden;">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between w-100">
+        <a routerLink="/admin/dashboard" class="logo d-flex align-items-center">
+            <img src="../../../../assets/images/company-logo.avif" alt="logo" class="logo-img">
+            <span class="company-text d-lg-block ms-3">Company Name</span>
+        </a>
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+                <li class="nav-items me-4">Test</li>
+                <li class="nav-items me-4">Test</li>
+                <li class="d-flex align-items-center me-4">
+                    <label class="form-check-label me-2" for="darkModeToggle"><fa-icon class="signup-icon"
+                            [icon]="FaSun"></fa-icon></label>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="darkModeToggle" (change)="toggleTheme()"
+                            [checked]="themeService.getTheme() === 'dark'">
+                        <label class="form-check-label" for="darkModeToggle"><fa-icon class="signup-icon"
+                                [icon]="FaMoon"></fa-icon></label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
