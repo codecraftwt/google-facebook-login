@@ -1,3 +1,151 @@
+<div class="">
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card child-card h-100">
+                <div class="card-body child-cardbody">
+                    <h5 class="card-title">Weekly Sales</h5>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h1>$47K</h1>
+                            <span>+3.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card child-card h-100">
+                <div class="card-body child-cardbody">
+                    <div class="row h-100 justify-content-between g-0">
+                        <div class="col-2 col-sm-3  pe-2">
+                            <h5 class="card-title">Total Orders</h5>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h1>$58.4K</h1>
+                                    <span>+3.5%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto position-relative">
+                            <div class="doughnut-chart">
+                                <!-- <canvasjs-chart [options]="chartOptionsTO"
+                                    [styles]="{width: '100%', height:'360px'}"></canvasjs-chart> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card child-card">
+                <div class="card-body child-cardbody">
+                    <div class="row h-100 justify-content-between g-0">
+                        <div class="col-2 col-sm-3  pe-2">
+                            <h5 class="card-title">Market Share</h5>
+                            <table class="table table-responsive w-50">
+                                <tbody>
+                                    <tr *ngFor="let share of marketShare, i of index">
+                                        <td class="theme-table">{{share.id}}</td>
+                                        <td class="theme-table">{{share.brandName}}</td>
+                                        <td class="theme-table">{{share.percent}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-auto position-relative">
+                            <div class="doughnut-chart">
+                                <canvasjs-chart [options]="chartOptionsMS"
+                                    [styles]="{width: '100%', height:'170px'}"></canvasjs-chart>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card child-card h-100">
+                <div class="card-body child-cardbody">
+                    <h5 class="card-title">Weather</h5>
+                    <div class="d-flex justify-content-between">
+                        <fa-icon class="dash-icon me-2" [icon]="FaSun"></fa-icon>
+                        <div class="card-text ms-5">
+                            <h5 class="mb-0">New York City</h5>
+                            <div class="weather-info">
+                                <span>sunny</span>
+                            </div>
+                            <div class="precipitation-info">
+                                <span>Precipitation: 50%</span>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div>
+                                <h1>{{31 | temperature}}</h1>
+                                {{32 | temperature}} / {{25 | temperature}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card child-card h-100">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        Running project
+                        <div class="dropdown">
+                            <select class="form-select" name="" id="">
+                                <option value="">Working Time</option>
+                                <option value="">Abhishek</option>
+                                <option value="">Trupti</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body child-cardbody">
+                    <table class="table table-responsive ">
+                        <thead></thead>
+                        <tbody>
+                            <tr *ngFor="let project of runningProjects">
+                                <td class="theme-table">{{project.id}}</td>
+                                <td class="theme-table">{{project.name}}</td>
+                                <td class="theme-table">{{project.percentage}}%</td>
+                                <td class="theme-table">{{project.timing}}</td>
+                                <td class="theme-table">pro-bar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card child-card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        Total Sales
+                        <div class="dropdown">
+                            <select class="form-select" name="" id="">
+                                <option value="">Working Time</option>
+                                <option value="">Abhishek</option>
+                                <option value="">Trupti</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body child-cardbody">
+                    <div>
+                        <canvasjs-chart [options]="chartOptions"
+                            [styles]="{width: '100%', height:'300px'}"></canvasjs-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 <h1 class="text-center">Hello User</h1>
 <h3 class="text-center">Welcome to Dashboard</h3>
 

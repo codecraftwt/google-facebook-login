@@ -14,7 +14,7 @@
   --headerText: #000000;
 
   /* Content */
-  --contentBg: #ffffff;
+  --contentBg: #edf2f9;
   --contentText: #000000;
 
   /* Button Colors */
@@ -23,7 +23,25 @@
   --saveButtonHoverBg: #218838;
   --cancelButtonBg: #dc3545;
   --cancelButtonHoverBg: #c82333;
+
+  /* Card and card body Colors */
+  --cardBg: #ffffff;
+  --cardText: #000000;
+  --cardbodyBg: #ffffff;
+  --cardbodyText: #000000;
+
+  /* Card and card body Colors */
+  --childcardBg: #ffffff;
+  --childcardText: #000000;
+  --childcardBorder: #000000;
+  --childcardbodyBg: #ffffff;
+  --childcardbodyText: #000000;
+
+  /* Tables background and text Colors */
+  --tableBg: #ffffff;
+  --tableText: #000000;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background);
@@ -136,18 +154,47 @@ h6 {
   padding: 15px;
 }
 .sidebar .nav-item:hover {
-  color: gray;
-  background-color: aliceblue;
+  color: #2a79e4;
+  background-color: #aab7cf;
   border-radius: 5px;
+}
+.sidebar .logoutbox {
+  position: absolute;
+  bottom: 0px;
+  width: 86%;
 }
 
 /* Main content */
 .main-content {
-  margin-top: 60px;
+  margin-top: 70px;
   padding: 20px 30px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
+}
+.main-content .card {
+  background-color: var(--cardBg) !important;
+  color: var(--cardText) !important;
+}
+
+.main-content .card-body {
+  background-color: (var(--cardbodyBg));
+  color: (var(--cardbodyText));
+}
+.main-content .child-card {
+  background-color: var(--childcardBg) !important;
+  color: var(--childcardText) !important;
+  border: var(--childcardBorder) solid 0.5px !important;
+}
+
+.main-content .child-cardbody {
+  background-color: (var(--childcardbodyBg));
+  color: (var(--childcardbodyText));
+}
+
+.theme-table {
+  background-color: (var(--tableBg)) !important;
+  color: (var(--tableText)) !important;
 }
 
 /* General Button Styling */
@@ -178,4 +225,9 @@ h6 {
 
 .cancel-button:hover {
   background-color: var(--cancelButtonHoverBg);
+}
+
+/* Icon Styling */
+.dash-icon{
+  font-size: larger;
 }

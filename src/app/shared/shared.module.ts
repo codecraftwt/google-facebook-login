@@ -5,14 +5,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainLandingComponent } from './components/main-landing/main-landing.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { TemperaturePipe } from './pipes/temperature.pipe';
 
 
 @NgModule({
   declarations: [
     SidebarComponent,
     HeaderComponent,
-    MainLandingComponent
+    MainLandingComponent,
+    TemperaturePipe
   ],
   imports: [
     CommonModule,
@@ -22,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   exports: [
     SidebarComponent,
     HeaderComponent,
-    MainLandingComponent
+    MainLandingComponent,
+    TemperaturePipe
   ]
 })
 export class SharedModule { }
